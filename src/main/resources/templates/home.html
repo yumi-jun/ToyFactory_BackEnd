@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Time is: ' + ${serverTime} + '!'" />
+
+<form action="/form_input1" method="POST">
+    Name: <input name="name"><br />
+    Age: <input name="age"><br />
+    <input type="submit" value="Submit data">
+</form>
+
+
+<form action="/form_input2" method="POST">
+    Name: <input name="password"><br />
+    Age: <input name="username"><br />
+    <input type="submit" value="Submit data">
+</form>
+
+</body>
+</html>

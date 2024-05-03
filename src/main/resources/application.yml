@@ -1,0 +1,28 @@
+server:
+  port: 1234 # ?? ?? ????
+
+spring:
+  # H2 Database ??
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./h2databaseStorage # 나의 C 드라이브/h2databaseStorage 에 데이터 영구적 저장
+    #  data base ?? ??
+    #url: 'jdbc:h2:~/test'    # H2 DB ?? ?? (Embedded Mode)
+    username: sa      # H2 DB ?? PW (??? ??)
+    password:
+  # H2 Console ??
+  h2:
+    console: # H2 DB? ??? ??? ? ?? ??
+      enabled: true           # H2 Console ?? ??
+      path: /h2-console       # H2 Console path 경로
+
+  # JPA ??
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create        # DB ??? ?? (none, create, create-drop, update, validate)
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true      # ?? ?? ?? (??)
+        show_sql: true        # ?? ?? ??
