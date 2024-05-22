@@ -18,6 +18,8 @@ public class Member {
     private String username;
     private String password;
 
+    private String interest;
+
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL) // 일대다 관계 설정
     private List<Quiz> quizzes;
 
