@@ -6,14 +6,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class ApiKeyService {
 
-    /*
-    @Value("${chatgpt.api.key}")
+
+
     private String apiKey;
-    */
-    /*
+
+
     public String getApiKey() {
         return apiKey;
     }
-    */
+
 
 }

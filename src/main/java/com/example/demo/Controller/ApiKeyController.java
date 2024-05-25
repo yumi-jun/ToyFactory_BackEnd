@@ -13,11 +13,10 @@ public class ApiKeyController {
         this.apiKeyService = apiKeyService;
     }
 
-    /*
     @GetMapping("/api-key")
     public String getApiKey() {
         return apiKeyService.getApiKey();
     }
-    */
+
 
 }

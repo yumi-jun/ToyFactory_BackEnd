@@ -62,5 +62,13 @@ public class QuizController {
         return ResponseEntity.ok(quizzes);
     }
 
+    @GetMapping("/quiz")
+    public ResponseEntity<List<Quiz>> GetQuizList()
+    {
+        List<Quiz> quizzes = quizRepository.findAll();
+
+        return ResponseEntity.ok(quizzes);
+    }
+
 
 }
