@@ -491,3 +491,18 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 16 more
+2024-05-26 04:33:43.299825+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "QUIZ_QUES CHARACTER VARYING(2000)": "U&'Q. What is the purpose of a system call in an operating system?\\000a\\000aa) T... (2428)"; SQL statement:
+insert into quiz (lecture_name,quiz_option,quiz_ques,userid,quizid) values (?,?,?,?,?) [22001-224]
+2024-05-26 04:59:44.020113+09:00 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "QUIZ_QUES CHARACTER VARYING(2000)": "U&'Q. What is the purpose of system calls in an operating system?\\000a\\000aa) To... (2306)"; SQL statement:
+insert into quiz (lecture_name,quiz_option,quiz_ques,userid,quizid) values (?,?,?,?,?) [22001-224]
+2024-05-26 13:21:16.766984+09:00 jdbc[183]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "QUIZ_QUES CHARACTER VARYING(2000)": "U&'Q. What is the purpose of system calls in an operating system?\\000a\\000a a) T... (2716)"; SQL statement:
+insert into quiz (lecture_name,quiz_option,quiz_ques,userid,quizid) values (?,?,?,?,?) [22001-224]
+2024-05-26 13:28:36.501905+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "QUIZ_QUES CHARACTER VARYING(2000)": "U&'Q. What are some examples of system calls that processes can request the OS t... (3704)"; SQL statement:
+insert into quiz (lecture_name,quiz_option,quiz_ques,userid,quizid) values (?,?,?,?,?) [22001-224]
+2024-05-26 13:30:41.614764+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "QUIZ_QUES CHARACTER VARYING(2000)": "U&'Q. What is the purpose of a system call in an operating system?\\000a\\000aa) T... (2979)"; SQL statement:
+insert into quiz (lecture_name,quiz_option,quiz_ques,userid,quizid) values (?,?,?,?,?) [22001-224]

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @RestController
 public class QuizController {
@@ -20,6 +21,8 @@ public class QuizController {
     @Autowired
     private QuizRepository quizRepository;
 
+    //
+    private List<String> currentQuiz = new CopyOnWriteArrayList<>();
 
     @PostMapping("/quiz")
     public ResponseEntity<String> uploadQuiz(@RequestParam String quizQues,@RequestParam String lectureName,  @RequestParam String id,@RequestParam String quizOption) {
@@ -71,5 +74,16 @@ public class QuizController {
         return ResponseEntity.ok(quizzes);
     }
 
+    @PostMapping("/Selectquiz")
+    public String setQuiz(@RequestBody List<String> quiz) {
+        currentQuiz.clear();
+        currentQuiz.addAll(quiz);
+        return "Quiz set successfully!";
+    }
+
+    @GetMapping("/Selectquiz")
+    public List<String> getQuiz() {
+        return currentQuiz;
+    }
 
 }
