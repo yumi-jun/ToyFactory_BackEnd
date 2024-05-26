@@ -26,6 +26,7 @@ public class Quiz {
 
     private String LectureName;
 
+    private String QuizOption;
 
 
 }

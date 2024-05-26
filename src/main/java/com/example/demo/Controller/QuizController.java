@@ -22,7 +22,7 @@ public class QuizController {
 
 
     @PostMapping("/quiz")
-    public ResponseEntity<String> uploadQuiz(@RequestParam String quizQues,@RequestParam String lectureName,  @RequestParam String id) {
+    public ResponseEntity<String> uploadQuiz(@RequestParam String quizQues,@RequestParam String lectureName,  @RequestParam String id,@RequestParam String quizOption) {
 
         System.out.println("----1");
         // id를 int로 변환하여 사용할 수 있습니다.
@@ -40,6 +40,7 @@ public class QuizController {
             quiz.setMember(member); // 회원 정보 설정
             quiz.setQuizQues(quizQues); // 퀴즈 내용 설정
             quiz.setLectureName(lectureName); // 퀴즈 이름 설정
+            quiz.setQuizOption(quizOption);
 
             // 생성된 퀴즈 엔티티를 저장합니다.
             quizRepository.save(quiz);
